@@ -12,6 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class StatelessCounterController {
     @PostMapping("/countUp")
     public CounterServiceResponse countUp(@RequestBody CounterServiceRequest request) {
-        return new CounterServiceResponse(request.getNumber());
+        return new CounterServiceResponse(request.getNumber() + 1);
     }
 }
